@@ -1,0 +1,152 @@
+/* El estil amb * esborra els valors per defecte que té un navegador. Va bé per esborrar els valors per defecte de margin i padding */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.layer {
+  top: 0px;
+  left: 0px;
+  position: absolute; /* Els elements amb position absolute es situen sense dependre de la resta d'elements, es poden superposar. com si fossin capes */
+  background-color: transparent;
+  width: 100vw;
+  /* vw viewport width - Representa un percentatge de la mida de la finestra del navegador, 100vw és 100% */
+  /* vh viewport height */
+  height: 100vh;
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+/*z-index és una propietat que permet canviar la profuncitat o ordre dels div. Els elements amb valor z-index més gran tapen els de menor valor.*/
+#layer1 {
+  z-index: 1;
+  background-image: url("http://www.firewatchgame.com/images/parallax/parallax0.png");
+}
+
+#layer2 {
+  z-index: 2;
+  background-image: url("http://www.firewatchgame.com/images/parallax/parallax2.png");
+}
+
+#layer3 {
+  z-index: 3;
+  background-image: url("http://www.firewatchgame.com/images/parallax/parallax4.png");
+}
+
+/* CAPA 1 >>> Right i Left1-------------------------------------- */
+#left {
+  position: absolute;
+  background-color: orangered;
+  left: 0px;
+
+  width: 40vw;
+  min-width: 200px;
+
+  height: 30vw;
+  min-height: 300px;
+
+  top: 50%;
+  transform: translate(
+    0,
+    -50%
+  ); /*Valor x i valor y. Percentage sobre les mides de l'element, no del contenidor pare*/
+}
+
+#right {
+  position: absolute;
+  background-color: skyblue;
+  right: 0px;
+
+  width: 40vw;
+  min-width: 200px;
+
+  height: 30vw;
+  min-height: 300px;
+
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+/* CAPA 2>> Center i buttons a la capa 2------------------------*/
+#center {
+  position: absolute;
+  background-color: darkgrey;
+
+  width: 40vw;
+  min-width: 200px;
+
+  height: 20vw;
+  min-height: 200px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /*display: flex >> propietat del contenidor html que dona més opcions per maquetar més fàcilment els elements que conté*/
+  /*flex-direction >> Si és row >> el contingut es distribueix d'esquerra a dreta, en horitzontal*/
+  /*flex-direction >> Si és column >> el contingut es distribueix de dalt a baix, en vertical*/
+
+  display: flex;
+  flex-direction: column; /*row si fos horitzontal*/
+  align-items: center; /* Alineació a l'eix creuat. En aquest cas horitzontal*/
+  justify-content: center; /* Alineació a l'eix principal. En aquest cas column*/
+}
+
+/*Botons de la capa 2*/
+.buttonL2 {
+  background-color: dimgrey;
+  width: 50%; /* Percentatge respecte el div pare o contenidor */
+  height: 40px;
+
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* CAPA 3>> Títol i barra inferior ---------------------------------------*/
+#titol {
+  position: absolute;
+
+  /*Centrar en hortitzontal*/
+  left: 50%; /*Mou respecte el contenidor*/
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Valor x i valor y. Mou respecte les pròpies dimensions*/
+
+  margin-top: 30px;
+
+  font-size: 20pt;
+}
+
+#barra {
+  position: absolute;
+  background-color: darkgrey;
+
+  width: 80vw;
+  height: 100px;
+
+  bottom: 0px;
+
+  /*Centrar en hortitzontal*/
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonL3 {
+  background-color: dimgrey;
+  width: 30%; /* Percentatge respecte el div pare o contenidor */
+  height: 40px;
+
+  margin-left: 15px;
+  margin-right: 15px;
+
+  text-align: center;
+}
