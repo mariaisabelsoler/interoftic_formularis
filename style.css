@@ -39,5 +39,6 @@
   transform: translate(
     -50%,0
   );
-  margin: 20px 0px;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
