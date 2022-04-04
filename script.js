@@ -11,12 +11,15 @@ var formularis_arr = [formulari1, formulari2, formulari3, formulari4];
 
 //**************************************************************************************************************************
 
-function triarFormulari(){
+function triarFormulari() {
+  console.log(desplegable.value, Number(desplegable.value) - 1);
+  
   for (var i = 0; i < formularis_arr.length; i++){
     formularis_arr[i].style.visibility = "hidden";
   }
-  formularis_arr[Number(desplegable.value)-1].style.visibility = "visible";
-  console.log(desplegable.value, Number(desplegable.value)-1);
+  formularis_arr[Number(desplegable.value) - 1].style.visibility = "visible";
+  
+  
 }
 
 function desplegableChange(event) {
