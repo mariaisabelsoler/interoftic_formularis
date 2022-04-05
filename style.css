@@ -1,44 +1,52 @@
-/* El estil amb * esborra els valors per defecte que té un navegador. Va bé per esborrar els valors per defecte de margin i padding */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
+  font-family: 'Roboto', sans-serif;
 }
-/*
-#container {
-  top: 0px;
-  left: 0px;
-  position: absolute;
-  background-color: transparent;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  justify-content: center; 
+
+label{
+  text-align: left;
 }
-*/
 
-/* CAPA 3>> Títol i barra inferior ---------------------------------------*/
-
-.formulari {
+.ui {
   position: absolute;
-  top: 60px;
-  left: 50%;
-  height: 960px;
+  width: 40vw;
+  min-width: 200px;
+
+  padding: 20px;
+
+  top: 5;
+  
+  /*centrar*/
+  left: 50%;  
   transform: translate(
-    -50%,0
+    -50%, 0
   );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .desplegable {
+  font-size: 14pt;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.formulari {
   position: absolute;
-  left: 50%;
-  font-size: x-large;
+  top: 150px;
+  width: 500px;
+  height: 1400px;
+
+  /*centrar*/
+  left: 50%;  
   transform: translate(
-    -50%,0
+    -50%, 0
   );
-  margin-top: 20px;
-  margin-bottom: 50px;
 }

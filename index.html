@@ -4,46 +4,68 @@
     <head>
         <meta charset="UTF-8">
 
-        <!-- Títol que apareix a la pestanya del navegador -->
         <title>Formularis assignatures</title>
 
-        <link rel="stylesheet" type="text/css" href="style.css">
-
         <!-- Carrega de Google fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Varta:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-        <!-- Carrega de la fulla d'estils CSS 
-        <link rel="stylesheet" type="text/css" href="styles.css">-->
+        <!-- Carrega de la fulla d'estils CSS -->
+        <link rel="stylesheet" type="text/css" href="style.css">
 
 
     </head>
 
     <body>
-        <!-- div container. Contindrà tota l'estructura de la web-->
         <div id="container">
-            <!-- div interface. Div de la dreta. A on estaran els desplegables-->
-      
-                  <form >
-                    <select class="desplegable" id="desplegable" name="Assignatura">
-                    <option value="1">Fonaments de programació</option>
-                    <option value="2">Pràciques de programació</option>
-                    <option value="3">Administració d'organitzacions</option>
-                    <option value="4">Àlgebra</option>
-                    </select>
-                 </form>
-                  <br>
-           
-                <!-- Fonaments de programació  -->
-                <iframe class="formulari" id="1" src="https://docs.google.com/forms/d/e/1FAIpQLSdHztH-66sF8BIcbnn1x-ovZazBAZJc5iwAwje-K46a2x3Bhw/viewform?embedded=true" width="640" height="900" frameborder="0" marginheight="0" marginwidth="0">S&#39;està carregant…</iframe>
-                <!-- Pràctiques de programació  -->
-                <iframe class="formulari" id="2" src="https://docs.google.com/forms/d/e/1FAIpQLSc8m1pEYHfQHj3cB7BFx744uKddSCO4ewAb4TJGWmxDOLYR2Q/viewform?embedded=true" width="640" height="767" frameborder="0" marginheight="0" marginwidth="0">S&#39;està carregant…</iframe>
-                <!-- Administració i gestió d'organitzacions  -->
-                <iframe class="formulari" id="3" src="https://docs.google.com/forms/d/e/1FAIpQLSccDO_dCVmSRLgJS-KrOEakJUp9qdCLvOqxsRPlEu0I7-P2gg/viewform?embedded=true" width="640" height="767" frameborder="0" marginheight="0" marginwidth="0">S&#39;està carregant…</iframe>
-                <!-- Àlgebra  -->
-                <iframe class="formulari" id="4" src="https://docs.google.com/forms/d/e/1FAIpQLSc6s7LTzAn3PFpparZvEq6H4QuxH-YZyksn0IMMA5oi7tB9MA/viewform?embedded=true" width="640" height="767" frameborder="0" marginheight="0" marginwidth="0">S&#39;està carregant…</iframe>
+            <div class="ui">
+                <label for="tipologia">Tria una tipologia:</label>
+                <select class = "desplegable" id="tipologia">
+                <option value = 0 > Totes A-Z </option>
+                <option value = 1 > Formació bàsica </option>
+                <option value = 2 > Formació obligatòria </option>
+                <option value = 3 > Enginyeria de Computadors </option>
+                <option value = 4 > Enginyeria del Programari </option>
+                <option value = 5 > Computació </option>
+                <option value = 6 > Tecnologies de la Informació </option>
+                <option value = 7 > Sistemes d'Informació </option>
+                </select> 
+                <label for="assignatura">Tria una assignatura:</label>
+                <select class = "desplegable" id="assignatura">
+                </select>            
+            </div>
+            <!-- //1 FORMACIÓ BÀSICA////////////////////////////////////////////////////////////  -->
+            <!-- Fonaments de programació  -->
+            <iframe class="formulari" id="basica1" src="https://docs.google.com/forms/d/e/1FAIpQLSdHztH-66sF8BIcbnn1x-ovZazBAZJc5iwAwje-K46a2x3Bhw/viewform?embedded=true" width="640" height="900" frameborder="0" marginheight="0" marginwidth="0">S&#39;està carregant…</iframe>
+            <!-- Pràctiques de programació  -->
+            <iframe class="formulari" id="basica2" src="https://docs.google.com/forms/d/e/1FAIpQLSc8m1pEYHfQHj3cB7BFx744uKddSCO4ewAb4TJGWmxDOLYR2Q/viewform?embedded=true" width="640" height="767" frameborder="0" marginheight="0" marginwidth="0">S&#39;està carregant…</iframe>
+            <!-- Administració i gestió d'organitzacions  -->
+            <iframe class="formulari" id="basica3" src="https://docs.google.com/forms/d/e/1FAIpQLSccDO_dCVmSRLgJS-KrOEakJUp9qdCLvOqxsRPlEu0I7-P2gg/viewform?embedded=true" width="640" height="767" frameborder="0" marginheight="0" marginwidth="0">S&#39;està carregant…</iframe>
+            <!-- Àlgebra  -->
+            <iframe class="formulari" id="basica4" src="https://docs.google.com/forms/d/e/1FAIpQLSc6s7LTzAn3PFpparZvEq6H4QuxH-YZyksn0IMMA5oi7tB9MA/viewform?embedded=true" width="640" height="767" frameborder="0" marginheight="0" marginwidth="0">S&#39;està carregant…</iframe>
+        
+            <!-- //2 FORMACIÓ OBLIGATÒRIA id="obligatoria1" //////////////////////////////////////////////////////  -->
+            <!-- Disseny i programació orientada a objectes  -->
+
+            <!-- //3 ITINERARI Enginyeria de Computadors id="computadors1" //////////////////////////////////////////////////////  -->
+            <!-- Sistemes encastats  -->
+
+            <!-- //4 ITINERARI Enginyeria del Programari id="programari1" //////////////////////////////////////////////////////  -->
+            <!-- Disseny d'estructures de dades  -->
+
+            <!-- //5 ITINERARI Computació id="computacio1" /////////////////////////////////////////////////////////////////////  -->
+            <!-- Autòmats i gramàtiques  -->
+
+            <!-- //6 ITINERARI Tecnologies de la Informació id="tecnologies1" ///////////////////////////////////////////////////  -->
+            <!-- Disseny de xarxes de computadors  -->
+
+            <!-- //7 ITINERARI Sistemes d'Informació id="sistemes1" //////////////////////////////////////////////////////////  -->
+            <!-- Fonaments de sistemes d'informació  -->
+        
+        
         </div>
 
         <script src="script.js"></script>
+
     </body>
 </html>
